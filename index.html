@@ -9,10 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="titulo">Boas-Vindas!</h1>
-        <p>Personalizar saudação usando JavaScript</p>
-        <div class="saudacao" id="msgSaudacao">Olá, visitante!</div>
-        <button onclick="saudacao()">Personalizar Saudação</button>
+        <h1 id="titulo">Lista de Tarefas</h1>
+        <p>Adicione as tarefas!</p>
+        <input type="text" id="input-tarefa" placeholder="Digite a tarefa..."/>
+        <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        <p id="mensagem"></p>
+        <ul id="lista-tarefas"></ul>
     </div>
 </body>
 </html>
