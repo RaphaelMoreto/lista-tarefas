@@ -1,16 +1,27 @@
 function adicionarTarefa() {
-    let msg = "Tarefa adicionada com sucesso!";
+    const mensagem = document.getElementById("mensagem");
 
-    let inputTarefa = document.getElementById("input-tarefa");
-    let tarefa = inputTarefa.value;
-    document.getElementById("mensagem").textContent = msg;
+    const inputTarefa = document.getElementById("input-tarefa");
+    let tarefa = inputTarefa.value.trim();//RETIRA ESPAÇOS EM BRANCOS NO INICIO E NO FINAL DO VALOR
 
-    let listaTarefas = document.getElementById("lista-tarefas");
-    let newElementLi = document.createElement("li");//CRIA UM ELEMENTO "li" NA MÉMORIA
+    if (tarefa == null || tarefa == "") {
+        let alerta = "Digite uma tarefa para adicioná-la a sua lista!";
 
-    newElementLi.textContent = tarefa;
+        //INTERAGINDO COM O CSS PARA APLICAR A COR VERMELHO QUANDO A TAREFA FOR VAZIA
+        mensagem.style.color = "#a34743";
 
-    listaTarefas.appendChild(newElementLi);//ADICIONA O ELEMENTO NA PÁGINA
-    
-    inputTarefa.value = "";
+        mensagem.textContent = alerta;
+    } else {
+        mensagem.style.color = "#FFFFFF";
+        mensagem.textContent = "Tarefa adicionada com sucesso!";
+
+        const listaTarefas = document.getElementById("lista-tarefas");
+        const newElementLi = document.createElement("li");//CRIA UM ELEMENTO "li" NA MÉMORIA
+
+        newElementLi.textContent = tarefa;
+
+        listaTarefas.appendChild(newElementLi);//ADICIONA O ELEMENTO NA PÁGINA
+        
+        inputTarefa.value = "";
+    }
 }

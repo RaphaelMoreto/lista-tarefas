@@ -5,17 +5,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #331F19; 
+    background-color: #FFFFFF; 
 }
 .container {
     text-align: center;
-    background-color: #CBBBA7;
+    background-color: #28A745;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 600px;
-    border: 2px solid #8B7D70;
+    border: 2px solid #000000;
 }
 h1 {
     color: #331F19;
@@ -25,7 +25,7 @@ p {
     font-size: 1.1em;
 }
 button {
-    background-color: #60041A;
+    background-color: #808080;
     color: #F4F0EA;
     padding: 10px 20px;
     border: none;
@@ -36,7 +36,7 @@ button {
     margin-top: 10px;
 }
 button:hover {
-    background-color: #A34743;
+    color: #000000;
 }
 ul {
     list-style: none;
